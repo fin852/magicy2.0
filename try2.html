@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+p {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.btn{
+  position: absolute;
+  top: 5%;
+  left:90%;
+  background-color: #22324E;
+  border: none;
+  color: white;  
+  text-align: center;
+  text-decoration: none;
+  display:inline-block;
+  font-size: 25px;
+  cursor: pointer;
+  font-family: 'Pangolin', cursive;
+}
+</style>
+</head>
+<body>
+
+<h2>The Sandidge Family</h2>
+<center>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <p style="width:100%">
+	<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%230B8043&amp;ctz=America%2FChicago&amp;src=Zmluc2FuZGlkZ2VAZ21haWwuY29t&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=bmlodXMyb2RyZjVnbzMxamtsMjdzMW1iNjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23F4511E&amp;color=%2333B679&amp;color=%238E24AA&amp;color=%230B8043" style="border:solid 1px #777" width="700" height="500" frameborder="0" scrolling="no"></iframe></p>
+<form action='fin.html' method='get'>
+<input class="btn" type='submit' value='FINNLEY'/>
+</form>
+</div>
+
+<div class="mySlides fade">
+  <p style="width:100%"><iframe src="https://calendar.google.com/calendar/embed?src=annikasandidge4%40gmail.com&ctz=America%2FChicago" style="border: 0" width="700" height="500" frameborder="0" scrolling="no"></iframe>
+</p>
+<form action='annie.html' method='get'>
+<input class="btn" type='submit' value='ANNIKA'/>
+</form>
+</div>
+
+<div class="mySlides fade">
+  <p style="width:100%">     <iframe src="https://calendar.google.com/calendar/embed?src=rsandidge9%40gmail.com&ctz=America%2FChicago" style="border: 0" width="700" height="500" frameborder="0" scrolling="no"></iframe>
+  </p>
+ 
+<form action='mom.html' method='get'>
+<input class="btn" type='submit' value='MOM'/>
+</form>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</center>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 6000); // Change image every 6 seconds
+}
+</script>
+
+</body>
+</html> 
